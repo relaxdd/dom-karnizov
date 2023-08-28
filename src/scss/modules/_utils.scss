@@ -1,0 +1,34 @@
+.container, .container-lg, .container-md {
+  --bs-gutter-x: 1.875rem;
+  --bs-gutter-y: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  width: 100%;
+}
+
+@media (min-width: #{map-get($bp_sizes, md)}) {
+  .container, .container-md {
+    max-width: #{map-get($max_widths, md)};
+  }
+}
+
+@media (min-width: #{map-get($bp_sizes, lg)}) {
+  .container, .container-lg, .container-md {
+    max-width: #{map-get($max_widths, lg)};
+  }
+}
+
+.page-title {
+  color: #0E0E0E;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 24px 0 38px;
+
+  @media (max-width: #{map-get($bp_sizes, lg)-1}) {
+    margin: 32px 0;
+  }
+}

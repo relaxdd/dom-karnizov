@@ -1,0 +1,27 @@
+.breadcrumbs {
+  margin-top: 25px;
+
+  &__link,
+  &__item {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 16.25px */
+  }
+
+
+  &__link {
+    color: #1DA1E2;
+    text-decoration-line: underline;
+  }
+
+  &__item {
+    color: #717070;
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, lg)-1}) {
+  .breadcrumbs {
+    display: none;
+  }
+}

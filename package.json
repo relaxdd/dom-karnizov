@@ -1,0 +1,41 @@
+{
+  "name": "dom-karnizov",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "author": {
+    "name": "Alexandr Antonov",
+    "email": "awenn2015@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.3.4",
+    "sanitize.css": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "@types/owl.carousel": "^2.3.3",
+    "autoprefixer": "^10.4.15",
+    "pug": "^3.0.2",
+    "sass": "^1.66.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.5",
+    "vite-plugin-pug-transformer": "^1.0.3"
+  },
+  "browserslist": {
+    "production": [
+      "ie >= 10",
+      "last 5 version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+extends ./templates/_layout
+
+block variables
+  - var title = "Конструктор"
+  - var breaditems = [{ text: "Конструтор" }]
+
+block head
+  link(href="./src/scss/designer.page.scss" rel="stylesheet")
+
+block content
+  main.content(role="main")
+    .container
+      include ./mixins/_breadcrumbs
+      +breadcrumbs(breaditems)
+
+      h1.page-title Конструктор карниза
+
+      include ./parts/designer/_wrapper
+
+block scripts
+  script(src="./src/ts/designer.page.ts" type="module")

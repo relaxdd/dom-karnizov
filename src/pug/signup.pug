@@ -1,0 +1,51 @@
+extends ./templates/_layout
+
+block variables
+  - var title = "Регистрация"
+  - var breaditems = [{ text: title }]
+
+block head
+  link(href="./src/scss/auth.page.scss" rel="stylesheet")
+
+block content
+  main.content(role="main")
+    .container
+      include ./mixins/_breadcrumbs
+      +breadcrumbs(breaditems)
+
+      h1.page-title #{title}
+
+      .auth__wrapper
+        .auth__ceil.auth__current
+          .auth__ceil__header
+            h2.auth__ceil__title Я новый пользователь
+          form.auth__form(action="/", method="POST")
+            .auth__form__fields(style="margin-bottom: 47px;")
+              .auth__form__group
+                label.auth__form__label(for="firstNameField") Имя
+                input#firstNameField.auth__form__field(type="text", name="given-name", placeholder="Иван", autocomplete="given-name")
+              .auth__form__group
+                label.auth__form__label(for="secondNameField") Фамилия
+                input#secondNameField.auth__form__field(type="text", name="family-name", placeholder="Грозный", autocomplete="family-name")
+              .auth__form__group
+                label.auth__form__label(for="loginField") Логин *
+                input#loginField.auth__form__field(type="text", name="user-login", placeholder="user123", autocomplete="username", required)
+              .auth__form__group
+                label.auth__form__label(for="emailField") Ваш E-mail *
+                input#emailField.auth__form__field(type="email", name="user-email", placeholder="example@domain.com", required)
+              .auth__form__group
+                label.auth__form__label(for="newPasswordField") Введите пароль *
+                input#newPasswordField.auth__form__field(type="password", name="user-password", autocomplete="new-password", placeholder="****************", required)
+              .auth__form__group
+                label.auth__form__label(for="repeatPasswordField") Повторите пароль *
+                input#repeatPasswordField.auth__form__field(type="password", name="repeat-password", autocomplete="new-password", placeholder="****************", required)
+            input.auth__form__submit(type="submit", value="Регистрация")
+        .auth__ceil.auth__suggest
+          .auth__ceil__header
+            h2.auth__ceil__title Я зарегистрированный пользователь
+          a.auth__suggest__link(href="/signin.html") Войти
+
+block scripts
+  script(src="./src/ts/auth.page.ts" type="module")
+
+

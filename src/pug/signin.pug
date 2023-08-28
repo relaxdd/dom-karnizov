@@ -1,0 +1,44 @@
+extends ./templates/_layout
+
+block variables
+  - var title = "Вход"
+  - var breaditems = [{ text: "Вход" }]
+
+block head
+  link(href="./src/scss/auth.page.scss" rel="stylesheet")
+
+block content
+  main.content(role="main")
+    .container
+      include ./mixins/_breadcrumbs
+      +breadcrumbs(breaditems)
+
+      h1.page-title Авторизация
+
+      .auth__wrapper
+        .auth__ceil.auth__current
+          .auth__ceil__header
+            h2.auth__ceil__title Я зарегистрированный пользователь
+          form.auth__form(action="/", method="POST")
+            .auth__form__fields
+              .auth__form__group
+                label.auth__form__label(for="emailField") Email *
+                input#emailField.auth__form__field(type="email", name="user-email", placeholder="example@domain.com", required)
+              .auth__form__group
+                label.auth__form__label(for="passwordField") Пароль *
+                input#passwordField.auth__form__field(type="password", name="user-password", autocomplete="current-password", placeholder="****************", required)
+            .auth__form__additional
+              .auth__form__remember
+                input#rememberField(type="checkbox", name="remember-me")
+                label(for="rememberField") Запомнить меня
+              a.auth__form__remind(href="#") Забыли пароль?
+            input.auth__form__submit(type="submit", value="Войти")
+        .auth__ceil.auth__suggest
+          .auth__ceil__header
+            h2.auth__ceil__title Я новый пользователь
+          a.auth__suggest__link(href="/signup.html") Зарегистрироваться
+
+block scripts
+  script(src="./src/ts/auth.page.ts" type="module")
+
+

@@ -1,0 +1,9 @@
+mixin breadcrumbs(items)
+  div(class="breadcrumbs")
+    a(href="/" class="breadcrumbs__link") Главная
+    each it, i in items
+      if (i !== items.length - 1)
+        a(href=`${it.link || "#"}` class="breadcrumbs__link") #{" "} / #{it.text}
+      else
+        span(class="breadcrumbs__item") #{" "} / #{it.text}
+

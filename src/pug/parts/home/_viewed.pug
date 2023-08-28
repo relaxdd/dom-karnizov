@@ -1,0 +1,22 @@
+-
+  var list = [
+    { src: "leaves-111864615 1.png", text: "Штора на тесьме Leaves<br>(цвет: коричневый)" },
+    { src: "ancona_3 1.png", text: "Штора на тесьме \"Ancona - V\"" },
+    { src: "senna-111858300 1.png", text: "Штора на тесьме \"Senna-XL\"" },
+    { src: "cremona-111538110 1.png", text: "Штора на тесьме Cremona<br>(цвет: Белый)" },
+  ]
+
+include ../../mixins/utils/_image
+
+section.viewed-products
+  .container
+    .viewed-products__header
+      h2.viewed-products__title Вы уже смотрели
+      img.viewed-products__icon(src="./images/eye-icon.svg", alt="eye-icon")
+    .viewed-products__cards
+      each it in list
+        article.viewed-products__item
+          .viewed-products__item__image
+            +image(it.src, "./images/")
+          .viewed-products__item__info
+            p.viewed-products__item__title Штора на тесьме Leaves<br>(цвет: коричневый)

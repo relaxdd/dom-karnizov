@@ -1,0 +1,21 @@
+.header-bottom
+  .container
+    .header-bottom__shell
+      #headerDropdownShell.header-bottom__dropdown
+        button#headerDropdownToggle.header-bottom__dropdown__btn
+          img(
+            alt="header-dropdown-burger",
+            src="./images/header-dropdown-burger.svg",
+            style="width: 15px; height: 15px;"
+          )
+          span Каталог
+        .header-bottom__dropdown__list
+          each it in dropdown
+            a(href=it.link)
+              img(alt="arrow-right-blue", src="./images/arrow-right-blue.svg")
+              span #{it.text}
+      nav.header-bottom__menu
+        ul.header-bottom__menu__list
+          each it in navigation
+            li.header-bottom__menu__item
+              a(href=it.link) #{it.text}

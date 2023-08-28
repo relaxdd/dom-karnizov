@@ -1,0 +1,104 @@
+-
+  var steps = [
+    { text: "Форма карниза", isCompleted: true },
+    { text: "Количество рядов", isCompleted: true },
+    { text: "Выбор трубы (профиля)", isCompleted: false },
+    { text: "Выбор кронштейна", isCompleted: false },
+    { text: "Выбор наконечника", isCompleted: false },
+    { text: "Выбор колец и крючков", isCompleted: false },
+    { text: "Оформление заказа", isCompleted: false },
+  ]
+
+  var materials = [
+    { src: "antique.png", text: "Антик" },
+    { src: "chrome.png", text: "Хром" },
+    { src: "chrome-mat.png", text: "Хром Мат." },
+    { src: "stainless-steel.png", text: "Нерж. Сталь" },
+    { src: "gold.png", text: "Золото" },
+    { src: "gold-mat.png", text: "Золото Мат." },
+    { src: "black.png", text: "Черный" },
+    { src: "black-mat.png", text: "Черный Мат." },
+    { src: "black-gold.png", text: "Черное Золото" },
+    { src: "white.png", text: "Белый" },
+    { src: "white-gold.png", text: "Белое Золото" },
+    { src: "chocolate.png", text: "Шоколад" },
+    { src: "gold-empire.png", text: "Золото Ампир" },
+    { src: "copper.png", text: "Медь" },
+    { src: "platinum.png", text: "Платина" },
+  ]
+
+.design__wrapper
+  .design__steps
+    each it, i in steps
+      .design__steps__item(class=`${it.isCompleted ? 'item-completed' : ''}`)
+        .design__steps__border
+          .design__steps__circle
+            span #{i + 1}
+        .design__steps__name
+          span #{it.text}
+  .design__materials
+    each it, i in materials
+      .design__materials__item(class=`${i === 0 ? "item-selected" : ""}`)
+        .design__materials__image
+          img(src=`./images/materials/${it.src}`, alt=`${it.src.split('.')[0]}`)
+        .design__materials__name
+          span #{it.text}
+  h2.design__title Выберите форму карниза
+  .design__builder
+    .design__builder__left
+      each it, i in steps
+        .design__builder__step(class=`${it.isCompleted ? "item-completed" : ""}`)
+          .design__builder__step__info
+            span.design__builder__step__order Шаг #{i + 1}
+            span.design__builder__step__name #{it.text}
+          .design__builder__step__icon
+            svg(xmlns="http://www.w3.org/2000/svg", width="42", height="43", viewBox="0 0 42 43", fill="none")
+              circle(cx="16", cy="16", r="16", transform="matrix(-1 0 0 1 37 5.51953)", fill="#B9CBD3")
+              circle(cx="20", cy="20", r="20.5", transform="matrix(-1 0 0 1 41 1.5)", stroke="#B9CBD3")
+              path(d="M19.8214 17.2808L24.0938 21.5665L19.808 25.8522", stroke="white", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+    .design__builder__center
+      .design__builder__select
+        button.design__builder__select__item.item-selected
+          img(src="./images/arrow-right-white.svg", alt="arrow-right-white")
+          span Квадрат
+        button.design__builder__select__item
+          img(src="./images/arrow-right-white.svg", alt="arrow-right-white")
+          span Круг
+        button.design__builder__select__item
+          img(src="./images/arrow-right-white.svg", alt="arrow-right-white")
+          span Другое
+      .design__builder__example
+        img(src="./images/3316_3318_1_3338_4363 1.png", alt="3316_3318_1_3338_4363 1")
+      .design__builder__move
+        button.design__builder__move__btn
+          svg(xmlns="http://www.w3.org/2000/svg", width="7", height="13", viewBox="0 0 7 13", fill="none")
+            path(d="M5.98436 1.5L1 6.5L6 11.5", stroke="#1DA1E2", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+          span Назад
+        button.design__builder__move__btn
+          span Далее
+          svg(xmlns="http://www.w3.org/2000/svg", width="7", height="13", viewBox="0 0 7 13", fill="none")
+            path(d="M1.01564 1.5L6 6.5L1 11.5", stroke="#1DA1E2", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+    .design__builder__right
+      h3.design__builder__title Комплектация карниза
+      .design__builder__config
+        .design__builder__config__item
+          span Форма корниза/Цвет Антик
+          span Прямой.
+        .design__builder__config__item
+          span Количество рядов
+          span 1 ряд
+        .design__builder__config__item
+          span Выбор трубы/ Диамент
+          span Выбор трубы (профиля)
+        .design__builder__config__item
+          span Выбор кронштейна
+          span Стеновой
+        .design__builder__config__item
+          span Выбор наконечника
+          span Заглушка
+        .design__builder__config__item
+          span Выбор колец и крючков
+          span Круглое с крючком
+        .design__builder__config__total
+          span Итого:
+          span 5000.20 руб.

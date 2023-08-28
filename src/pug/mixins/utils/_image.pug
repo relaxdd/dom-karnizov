@@ -1,0 +1,9 @@
+mixin image(src, base = false, props = {})
+  -
+    var attributes = {
+      src: base ? String(base) + src : src,
+      alt: src.split('/').at(-1).split('.')[0],
+      ...props
+    }
+
+  img&attributes(attributes)
