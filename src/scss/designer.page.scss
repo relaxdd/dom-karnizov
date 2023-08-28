@@ -4,7 +4,7 @@
 .design {
   &__wrapper {
     border-radius: 10px;
-    background: #FFF;
+    background: $white_color;
     box-shadow: 0 10px 50px 0 rgba(26, 77, 102, 0.10);
     padding: 55px 39px 45px;
     margin-bottom: 98px;
@@ -29,7 +29,7 @@
     }
 
     &__item.item-completed {
-      --bg-color: #1DA1E2;
+      --bg-color: $blue_color;
     }
 
     &__border {
@@ -47,7 +47,7 @@
       align-items: center;
       justify-content: center;
       background-color: var(--bg-color);
-      color: #FFF;
+      color: $white_color;
       text-align: center;
       font-size: 20px;
       font-weight: 700;
@@ -56,7 +56,7 @@
     }
 
     &__name {
-      color: #000;
+      color: $black_color;
       text-align: center;
       font-size: 15px;
       font-weight: 600;
@@ -94,7 +94,7 @@
     }
 
     &__item.item-selected &__image {
-      border-color: #1DA1E2;
+      border-color: $blue_color;
     }
 
     &__image {
@@ -109,7 +109,7 @@
     }
 
     &__name {
-      color: #000;
+      color: $black_color;
       text-align: center;
       font-size: 13px;
       font-weight: 400;
@@ -163,11 +163,11 @@
 
     &__step.item-completed &__step__icon {
       svg circle:nth-child(1) {
-        fill: #1DA1E2;
+        fill: $blue_color;
       }
 
       svg circle:nth-child(2) {
-        stroke: #1DA1E2;
+        stroke: $blue_color;
       }
     }
 
@@ -187,14 +187,14 @@
       }
 
       &__order {
-        color: #1DA1E2;
+        color: $blue_color;
         font-size: 17px;
         font-weight: 700;
         line-height: 125%;
       }
 
       &__name {
-        color: #000;
+        color: $black_color;
         font-size: 15px;
         font-weight: 600;
         line-height: 150%;
@@ -222,7 +222,7 @@
       &__item,
       &__total {
         border-radius: 8px;
-        background: #FFF;
+        background: $white_color;
         padding: 9px 16px;
         height: 60px;
       }
@@ -234,14 +234,14 @@
         justify-content: center;
 
         > span:first-child {
-          color: #1DA1E2;
+          color: $blue_color;
           font-size: 17px;
           font-weight: 700;
           line-height: 125%;
         }
 
         > span:last-child {
-          color: #000;
+          color: $black_color;
           font-size: 15px;
           font-weight: 400;
           line-height: 140%;
@@ -262,11 +262,11 @@
         }
 
         > span:first-child {
-          color: #1DA1E2;
+          color: $blue_color;
         }
 
         > span:last-child {
-          color: #000;
+          color: $black_color;
         }
       }
     }
@@ -279,7 +279,7 @@
       height: 83px;
 
       &__item.item-selected {
-        background-color: #1DA1E2;
+        background-color: $blue_color;
 
         &:hover {
           opacity: .8;
@@ -300,18 +300,18 @@
         justify-content: center;
         column-gap: 12px;
         border-radius: 4px;
-        border: 1px solid #1DA1E2;
-        background: #FFF;
+        border: 1px solid $blue_color;
+        background: $white_color;
         padding: 13px 24px;
         min-width: 124px;
         cursor: pointer;
         outline: none;
 
         &:hover {
-          background-color: #1DA1E2;
+          background-color: $blue_color;
 
           > span {
-            color: #FFF;
+            color: $white_color;
           }
         }
 
@@ -320,7 +320,7 @@
         }
 
         > span {
-          color: #000;
+          color: $black_color;
           font-size: 15px;
           font-weight: 400;
           line-height: 120%;
@@ -351,7 +351,7 @@
         justify-content: center;
         gap: 10px;
         border-radius: 4px;
-        border: 1px solid #1DA1E2;
+        border: 1px solid $blue_color;
         padding: 18px 28px;
         width: 160px;
         cursor: pointer;
@@ -359,7 +359,7 @@
         outline: none;
 
         > span {
-          color: #000;
+          color: $black_color;
           font-size: 13px;
           font-weight: 700;
           line-height: 120%;
@@ -369,14 +369,14 @@
       }
 
       &__btn:hover {
-        background-color: #1DA1E2;
+        background-color: $blue_color;
 
         > span {
           color: white;
         }
 
         > svg path {
-          stroke: #FFF;
+          stroke: $white_color;
         }
       }
     }

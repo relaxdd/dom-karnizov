@@ -4,7 +4,7 @@
 .auth {
   &__wrapper {
     border-radius: 10px;
-    background: #FFF;
+    background: $white_color;
     box-shadow: 0 10px 50px 0 rgba(26, 77, 102, 0.10);
     padding: 55px 47px 47px;
     display: flex;
@@ -17,11 +17,11 @@
     width: calc(50% - (75px / 2));
 
     &__header {
-      border-bottom: 2px solid #1DA1E2;
+      border-bottom: 2px solid $blue_color;
     }
 
     &__title {
-      color: #1DA1E2;
+      color: $blue_color;
       font-size: 22px;
       font-weight: 600;
       line-height: 125%;
@@ -40,7 +40,7 @@
   &__suggest__link {
     display: inline-block;
     border-radius: 4px;
-    border: 1px solid #1DA1E2;
+    border: 1px solid $blue_color;
     padding: 18px 34px;
     text-decoration: none;
     color: #0E0E0E;
@@ -113,8 +113,8 @@
 
         &:checked {
           background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3E%3C/svg%3E");
-          background-color: #1DA1E2;
-          border-color: #1DA1E2;
+          background-color: $blue_color;
+          border-color: $blue_color;
         }
 
         &:focus {
@@ -125,7 +125,7 @@
 
       > label {
         display: inline-block;
-        color: #000;
+        color: $black_color;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -134,7 +134,7 @@
     }
 
     &__remind {
-      color: #000;
+      color: $black_color;
       font-size: 14px;
       font-weight: 400;
       line-height: 125%;
@@ -146,8 +146,8 @@
       border: none;
       outline: none;
       border-radius: 4px;
-      background: #1DA1E2;
-      color: #FFF;
+      background: $blue_color;
+      color: $white_color;
       font-family: 'RF Dewi', sans-serif;
       font-size: 13px;
       font-weight: 800;

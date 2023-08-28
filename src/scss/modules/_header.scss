@@ -8,8 +8,8 @@
   background: linear-gradient(0deg, #DBF2FE 0%, #DBF2FE 100%),
   linear-gradient(0deg, #C2EBFF 0%, #C2EBFF 100%),
   linear-gradient(0deg, #C8ECFD 0%, #C8ECFD 100%),
-  linear-gradient(0deg, #FFF 0%, #FFF 100%),
-  linear-gradient(0deg, #C6E9FA 0%, #C6E9FA 100%), #FFF;
+  linear-gradient(0deg, $white_color 0%, $white_color 100%),
+  linear-gradient(0deg, #C6E9FA 0%, #C6E9FA 100%), $white_color;
 
   &__bg {
     display: flex;
@@ -84,7 +84,7 @@
   }
 
   &__about {
-    color: $black_color;
+    color: $dark_color;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -110,7 +110,7 @@
     }
 
     &__link > span {
-      color: $black_color;
+      color: $dark_color;
       font-size: 1rem;
       font-style: normal;
       font-weight: 400;
@@ -184,7 +184,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      color: $black_color;
+      color: $dark_color;
 
       &::placeholder {
         color: #7B8AA0;
@@ -238,7 +238,7 @@
       text-align: right;
       font-size: 1rem;
       line-height: 1.2;
-      color: $black_color;
+      color: $dark_color;
 
       > strong {
         font-size: 1.375rem;
@@ -296,7 +296,7 @@
       border-radius: 4px;
       border: none;
       outline: none;
-      background: linear-gradient(180deg, #FFF 0%, #C8EDFF 100%), linear-gradient(270deg, #736690 0%, #413A51 100%);
+      background: linear-gradient(180deg, $white_color 0%, #C8EDFF 100%), linear-gradient(270deg, #736690 0%, #413A51 100%);
       box-shadow: 0 8px 20px 0 rgba(16, 113, 161, 0.80);
       height: 38px;
       color: #186793;
@@ -332,7 +332,7 @@
       > a {
         display: inline-flex;
         align-items: center;
-        color: $black_color;
+        color: $dark_color;
         text-decoration: none;
         padding: 10px 0 12px;
 
@@ -384,7 +384,7 @@
     }
 
     &__item > a {
-      color: #FFF;
+      color: $white_color;
       font-size: 1.0625rem;
       font-style: normal;
       font-weight: 700;

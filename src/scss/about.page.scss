@@ -1,0 +1,64 @@
+@import "./modules/vars";
+@import "./modules/breadcrumbs";
+
+h1.page-title {
+  margin-bottom: 50px;
+}
+
+.about-company {
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
+  margin-bottom: 95px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 56px;
+  }
+
+  &__image {
+    flex: 0 0 auto;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__title {
+    color: #1DA1E2;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 125%;
+    margin: 0 0 30px;
+  }
+
+  &__description {
+    p {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    ul {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+
+      &.custom-marks {
+        padding-left: 0;
+
+        li {
+          list-style-type: none; /* Прячем исходные маркеры */
+        }
+
+        li::before {
+          color: #1DA1E2;; /* Цвет маркера */
+          content: "●"; /* Сам маркер */
+          padding-right: 10px; /* Расстояние от маркера до текста */
+        }
+      }
+    }
+  }
+}

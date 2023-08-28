@@ -1,0 +1,80 @@
+extends ./templates/_layout
+
+block variables
+  - var title = "Оформление заказа"
+  - var breaditems = [{ text: "Карнизы" }]
+  -
+    var orders = [
+      {
+        img: "312f3df116de1568d9ca835373b6d20b 1.png",
+        name: "Наконечник D19 «Шар большой» Чёрный",
+        qty: 2,
+        cost: "1 281,60"
+      },
+      {
+        img: "312f3df116de1568d9ca835373b6d20b 1.png",
+        name: "Наконечник D19 «Шар большой» Чёрный",
+        qty: 2,
+        cost: "1 281,60"
+      },
+      {
+        img: "312f3df116de1568d9ca835373b6d20b 1.png",
+        name: "Наконечник D19 «Шар большой» Чёрный",
+        qty: 2,
+        cost: "1 281,60"
+      }
+    ]
+  -
+    var total = (function () {
+      const dirty = orders.reduce((total, it) => total += parseFloat(it.cost.replaceAll(' ', '').replace(',', '.')), 0).toFixed(2).replace('.', ',')
+              return dirty.at(0) + ' ' + dirty.substring(1)
+              })()
+
+block head
+  link(href="./src/scss/checkout.page.scss" rel="stylesheet")
+
+block content
+  main.content(role="main")
+    .container
+      include ./mixins/_breadcrumbs
+      +breadcrumbs(breaditems)
+
+      h1.page-title #{title}
+
+      table.order-table
+        colgroup
+          col(width="15%")
+          col(width="45%")
+          col(width="12.5%")
+          col(width="12.5%")
+          col(width="15%")
+        tbody
+          each it, i in orders
+            tr.order-table__row(data-item=i)
+              td.order-table__image
+                include ./mixins/utils/_image
+                +image(it.img, "./images/")
+              td.order-table__name #{it.name}
+              td.order-table__stock
+                .order-table__stock__shell
+                  svg(xmlns="http://www.w3.org/2000/svg", width="8", height="9", viewBox="0 0 8 9", fill="none")
+                    circle(cx="4", cy="4.5", r="4", fill="#0EC20B")
+                  span В наличии
+              td.order-table__qty
+                .order-table__qty__shell
+                  button.order-table__qty__minus(data-action="minus")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="11", height="12", viewBox="0 0 11 12", fill="none")
+                      line(y1="6", x2="11", y2="6", stroke="black")
+                  input(type="text" value=it.qty required min="1" max="250" pattern="/[^0-9]/g")
+                  button.order-table__qty__plus(data-action="plus")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="11", height="12", viewBox="0 0 11 12", fill="none")
+                      line(y1="6", x2="11", y2="6", stroke="black")
+                      line(x1="5.5", y1="0.5", x2="5.5", y2="11.5", stroke="black")
+              td.order-table__cost #{it.cost} руб.
+        tfoot
+          tr.order-table__row
+            td(colspan="3") &nbsp;
+            td(colspan="2").order-table__total К оплате: <span>#{total} руб.</span>
+
+block scripts
+  script(src="./src/ts/checkout.page.ts")

@@ -3,13 +3,9 @@ import vitePugPlugin from "vite-plugin-pug-transformer";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  // root: "src",
-  base: "./",
   appType: "mpa",
   plugins: [vitePugPlugin({})],
   build: {
-    outDir: resolve(__dirname, "dist"),
-    assetsDir: resolve(__dirname, "assets"),
     manifest: true,
     rollupOptions: {
       input: {
