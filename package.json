@@ -21,6 +21,7 @@
     "@types/node": "^20.5.6",
     "@types/owl.carousel": "^2.3.3",
     "autoprefixer": "^10.4.15",
+    "glob": "^10.3.3",
     "pug": "^3.0.2",
     "sass": "^1.66.1",
     "typescript": "^5.1.6",

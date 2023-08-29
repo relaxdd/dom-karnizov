@@ -3,11 +3,11 @@ extends layouts/_base_layout
 block variables
   - var title = "Прайс"
   - var description = "Страница расценок по позициям"
-  - var canonical = "/price.html"
+  - var canonical = "/price"
   - var breaditems = [{ text: title }]
 
 block head
-  link(href="./src/scss/price.page.scss" rel="stylesheet")
+  link(href="/src/scss/price.page.scss" rel="stylesheet")
 
 block content
   .price__wrapper

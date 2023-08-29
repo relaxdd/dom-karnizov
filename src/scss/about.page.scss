@@ -81,6 +81,8 @@ h1.page-title {
 
 @media (max-width: #{map-get($bp_sizes, lg)-1}) {
   .about-company {
+    row-gap: 30px;
+
     &__item {
       border-radius: 10px;
       background: #FFF;
@@ -93,7 +95,25 @@ h1.page-title {
     }
 
     &__content {
-      padding: 34px 30px 0 0;
+      padding: 34px 30px 34px 0;
+    }
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, md)-1}) {
+  .about-company {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 40px;
+    }
+
+    &__image {
+      padding: 34px 40px 0 40px;
+    }
+
+    &__content {
+      padding: 0 20px 30px 20px;
     }
   }
 }

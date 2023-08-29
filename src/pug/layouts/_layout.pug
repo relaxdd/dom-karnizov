@@ -13,8 +13,8 @@ html(lang="ru_Ru")
     title Дом карнизов | #{title}
 
     link(rel="icon", type="image/svg+xml", href="/vite.svg")
-    link(href="./fonts/RF-Dewi/stylesheet.css" rel="stylesheet")
-    link(href="./src/scss/style.scss" rel="stylesheet")
+    link(href="/fonts/RF-Dewi/stylesheet.css" rel="stylesheet")
+    link(href="/src/scss/style.scss" rel="stylesheet")
 
     meta(name="description", content=description)
     link(rel="canonical", href=canonical)
@@ -36,6 +36,6 @@ html(lang="ru_Ru")
         block footer
           include ../templates/_footer
 
-    script(src="./src/ts/main.ts" type="module")
+    script(src="/src/ts/main.ts" type="module")
 
     block scripts

@@ -3,14 +3,14 @@ extends layouts/_base_layout
 block variables
   - var title = "Конструктор"
   - var description = "Страница конструктора продукта"
-  - var canonical = "/delivery.html"
+  - var canonical = "/delivery"
   - var breaditems = [{ text: "Конструктор" }]
 
 block head
-  link(href="./src/scss/designer.page.scss" rel="stylesheet")
+  link(href="/src/scss/designer.page.scss" rel="stylesheet")
 
 block content
   include ./parts/designer/_wrapper
 
 block scripts
-  script(src="./src/ts/designer.page.ts" type="module")
+  script(src="/src/ts/designer.page.ts" type="module")

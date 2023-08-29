@@ -4,7 +4,7 @@ include ./mixins/utils/_image
 block variables
   - var title = "Галерея работ"
   - var description = "Страница с нашими работами"
-  - var canonical = "/delivery.html"
+  - var canonical = "/delivery"
   - var breaditems = [{ text: title }]
   -
     var list = [
@@ -32,7 +32,7 @@ block variables
     ]
 
 block head
-  link(href="./src/scss/our-works.page.scss" rel="stylesheet")
+  link(href="/src/scss/our-works.page.scss" rel="stylesheet")
 
 block content
   .our-works__wrapper

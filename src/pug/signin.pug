@@ -3,11 +3,11 @@ extends layouts/_base_layout
 block variables
   - var title = "Вход"
   - var description = "Страница авторизации"
-  - var canonical = "/signin.html"
+  - var canonical = "/signin"
   - var breaditems = [{ text: "Вход" }]
 
 block head
-  link(href="./src/scss/auth.page.scss" rel="stylesheet")
+  link(href="/src/scss/auth.page.scss" rel="stylesheet")
 
 block content
   .auth__wrapper
@@ -34,4 +34,4 @@ block content
       a.auth__suggest__link(href="/signup.html") Зарегистрироваться
 
 block scripts
-  script(src="./src/ts/auth.page.ts" type="module")
+  script(src="/src/ts/auth.page.ts" type="module")
