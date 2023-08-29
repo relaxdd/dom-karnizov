@@ -1,0 +1,106 @@
+extends layouts/_base_layout
+
+block variables
+  - var title = "Прайс"
+  - var description = "Страница расценок по позициям"
+  - var canonical = "/price.html"
+  - var breaditems = [{ text: title }]
+
+block head
+  link(href="./src/scss/price.page.scss" rel="stylesheet")
+
+block content
+  .price__wrapper
+    .price__shell
+      h2.price__title Установка / Доставка
+
+      table.price__table.price__table__hard
+        tbody
+          tr
+            td(rowspan="4") Диаметр трубы:
+            td &nbsp;
+            td Стена (2 кронштейна)
+            td Потолок (2 кронштейна)
+            td Дополнительный кронштейн
+          tr
+            td 1 ряд
+            td 700р
+            td 700р
+            td +300р
+          tr
+            td 2 ряд
+            td 800р
+            td 800р
+            td +300р
+          tr
+            td 3 ряд
+            td 900р
+            td -
+            td +300р
+
+        tbody
+          tr
+            td(rowspan="3") Круглые эркерные карнизы
+            td &nbsp;
+            td &nbsp;
+            td &nbsp;
+            td &nbsp;
+          tr
+            td 1 ряд
+            td 700р
+            td 700р
+            td +300р
+          tr
+            td 2 ряд
+            td 800р
+            td 800р
+            td +300р
+
+        tbody
+          tr
+            td(rowspan="3") Багетные карнизы/эркерные
+            td &nbsp;
+            td До 2м
+            td До 2м
+            td 1м
+          tr
+            td &nbsp;
+            td 800р/1000р
+            td 900р/1100р
+            td 200р/300р
+          tr
+            td &nbsp;
+            td 200р/300р
+            td 200р/300р
+            td -
+
+    .price__shell
+      h2.price__title Навешивание штор
+
+      table.price__table.price__table__base
+        tboby
+          tr
+            td Стена (2 кронштейна)
+            td Стена (2 кронштейна)
+            td Стена (2 кронштейна)
+            td Высота свыше 3м + 15%
+          tr
+            td Тюль
+            td 1м.п
+            td 200р
+            td Высота свыше 3м + 15%
+          tr
+            td Портьера
+            td 1м.п
+            td 300р
+            td &nbsp;
+          tr
+            td Ламбрекен
+            td 1м.п  ткань
+            td 100р
+            td &nbsp;
+          tr
+            td Сложная ткань
+            td 1м.п  ткань
+            td 350р
+            td Бархат, сетка, велюр, лён

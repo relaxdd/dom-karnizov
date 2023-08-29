@@ -1,0 +1,41 @@
+block variables
+  - var title = "Название страницы";
+  - var description = ""
+  - var canonical = "/"
+
+doctype html
+html(lang="ru_Ru")
+  head
+    meta(charset="UTF-8")
+    meta(content="width=device-width initial-scale=1.0" name="viewport")
+    meta(http-equiv="Content-type", content="text/html; charset=UTF-8")
+
+    title Дом карнизов | #{title}
+
+    link(rel="icon", type="image/svg+xml", href="/vite.svg")
+    link(href="./fonts/RF-Dewi/stylesheet.css" rel="stylesheet")
+    link(href="./src/scss/style.scss" rel="stylesheet")
+
+    meta(name="description", content=description)
+    link(rel="canonical", href=canonical)
+
+    meta(property="og:locale", content="ru_RU")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content=`Дом карнизов | ${title}`)
+    meta(property="og:description", content=description)
+
+    block head
+  body
+    .wrapper
+      header.header
+        block header
+          include  ../templates/_header
+      main.content(role="main")
+        block main
+      footer(class="footer")
+        block footer
+          include ../templates/_footer
+
+    script(src="./src/ts/main.ts" type="module")
+
+    block scripts

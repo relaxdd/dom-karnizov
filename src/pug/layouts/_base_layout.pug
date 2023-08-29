@@ -1,0 +1,15 @@
+extends ./_layout
+
+block variables
+  - var breaditems = []
+
+block main
+  include ../mixins/_breadcrumbs
+
+  .container
+    +breadcrumbs(breaditems)
+
+    h1.page-title #{title}
+
+    .page-content
+      block content

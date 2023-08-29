@@ -1,5 +1,4 @@
 @import "./modules/vars";
-@import "./modules/breadcrumbs";
 
 .design {
   &__wrapper {
@@ -29,7 +28,7 @@
     }
 
     &__item.item-completed {
-      --bg-color: $blue_color;
+      --bg-color: #{$blue_color};
     }
 
     &__border {

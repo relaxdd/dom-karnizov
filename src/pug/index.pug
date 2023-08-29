@@ -1,18 +1,17 @@
-extends ./templates/_layout
+extends layouts/_layout
 
 block variables
   - var title = "Главная страница"
+  - var description = "Заказывайте у нас да?"
+  - var canonical = "/"
 
 block head
   link(href="./src/scss/home.page.scss" rel="stylesheet")
   script(src="https://code.jquery.com/jquery-3.7.0.min.js")
 
-block content
-  main.content(role="main")
-    include ./parts/home/_about_products
-    include ./parts/home/_viewed
+block main
+  include ./parts/home/_about_products
+  include ./parts/home/_viewed
 
 block scripts
   script(src="./src/ts/home.page.ts" type="module")
-
-

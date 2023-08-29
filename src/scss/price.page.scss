@@ -1,0 +1,93 @@
+@import "./modules/vars";
+
+h1.page-title {
+  margin-bottom: 38px;
+}
+
+.price {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+    margin-bottom: 54px;
+  }
+
+  &__title {
+    color: #1DA1E2;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 0 0 30px;
+  }
+
+  &__table {
+    --border-color: #E2E9F1;
+    --bg-color: #F3F7FC;
+
+    width: 100%;
+    font-family: 'RF Dewi', sans-serif;
+    color: #0E0E0E;
+    text-align: left;
+    font-size: 14px;
+
+    td:first-child {
+      border-left: 1px solid var(--border-color);
+    }
+
+    td {
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
+    }
+
+    &__hard {
+      tr:first-child td:not(:first-child),
+      tr:not(:first-child) td:first-child {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      tr:first-child td:first-child {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        vertical-align: top;
+      }
+
+      tr:first-child td:not(:first-child), {
+        background-color: var(--bg-color);
+      }
+
+      td:first-child {
+        padding: 10px 8px 10px 12px;
+      }
+
+      td {
+        padding: 10px 8px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+      }
+    }
+
+    &__base {
+      tr:first-child td {
+        background-color: var(--bg-color);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      td {
+        padding: 10px 8px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+      }
+    }
+  }
+}

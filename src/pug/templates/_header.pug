@@ -3,9 +3,9 @@
     { text: "Галерея работ", link: "#" },
     { text: "Конструктор", link: "/designer.html" },
     { text: "Услуги", link: "#" },
-    { text: "Прайс", link: "#" },
-    { text: "Оплата", link: "#" },
-    { text: "Доставка", link: "#" }
+    { text: "Прайс", link: "/price.html" },
+    { text: "Оплата", link: "/payment.html" },
+    { text: "Доставка", link: "/delivery.html" }
   ];
 
   var dropdown = [
@@ -16,11 +16,10 @@
     { text: "Портфолио", link: "#" },
     { text: "Конструктор", link: "/designer.html" },
     { text: "Услуги", link: "#" },
-    { text: "Оплата", link: "#" },
-    { text: "Доставка", link: "#" },
+    { text: "Оплата", link: "/payment.html" },
+    { text: "Доставка", link: "/delivery.html" },
   ]
 
-header.header
-  include ./header/_header_top
-  include ./header/_header_center
-  include ./header/_header_bottom
+include ./header/_header_top
+include ./header/_header_center
+include ./header/_header_bottom
