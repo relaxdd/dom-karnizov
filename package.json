@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node node/move.js",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "@types/node": "^20.5.6",
     "@types/owl.carousel": "^2.3.3",
     "autoprefixer": "^10.4.15",
+    "fs-extra": "^11.1.1",
     "glob": "^10.3.3",
     "pug": "^3.0.2",
     "sass": "^1.66.1",
