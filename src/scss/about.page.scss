@@ -11,13 +11,21 @@ h1.page-title {
   margin-bottom: 95px;
 
   &__item {
+    --img-width: 300px;
+
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     column-gap: 56px;
   }
 
   &__image {
     flex: 0 0 auto;
+
+    img {
+      width: var(--img-width);
+      height: var(--img-width);
+      object-fit: cover;
+    }
   }
 
   &__content {
@@ -38,6 +46,15 @@ h1.page-title {
       font-size: 14px;
       font-weight: 400;
       line-height: 150%;
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-top: 0;
     }
 
     ul {
@@ -49,15 +66,34 @@ h1.page-title {
         padding-left: 0;
 
         li {
-          list-style-type: none; /* Прячем исходные маркеры */
+          list-style-type: none;
         }
 
         li::before {
-          color: #1DA1E2;; /* Цвет маркера */
-          content: "●"; /* Сам маркер */
-          padding-right: 10px; /* Расстояние от маркера до текста */
+          color: #1DA1E2;
+          content: "●";
+          padding-right: 10px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, lg)-1}) {
+  .about-company {
+    &__item {
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0 10px 50px 0 rgba(26, 77, 102, 0.10);
+    }
+
+    &__image {
+      --img-width: 206px;
+      padding: 34px 0 0 40px;
+    }
+
+    &__content {
+      padding: 34px 30px 0 0;
     }
   }
 }

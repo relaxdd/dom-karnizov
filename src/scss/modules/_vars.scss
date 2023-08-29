@@ -5,7 +5,8 @@ $dark_color: #0E0E0E;
 $black_color: #000000;
 
 $bp_sizes: (
-  sm: 0,
+  xs: 0,
+  sm: 560px,
   md: 740px,
   lg: 1400px
 ) !default;

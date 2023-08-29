@@ -1,0 +1,117 @@
+@import "./modules/vars";
+
+h1.page-title {
+  margin-bottom: 44px;
+}
+
+.our-works {
+  &__wrapper {
+    margin-bottom: 96px;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    margin: 0 auto 50px;
+    max-width: 998px;
+
+    &__row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    &__item {
+      border-radius: 100px;
+      border: 1px solid #1DA1E2;
+      background-color: #FFF;
+      color: #0E0E0E;
+      text-align: center;
+      font-family: 'RF Dewi', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 135%;
+      padding: 4px 14px;
+    }
+
+    &__item.selected,
+    &__item:hover {
+      background: #1DA1E2;
+      color: #FFF;
+    }
+
+    &__item.selected {
+      cursor: default;
+    }
+  }
+
+  &__cards {
+    --qty-in-row: 4;
+    --item-gap: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--item-gap);
+
+    &__item {
+      flex: 0 0 auto;
+      width: calc(100% / var(--qty-in-row) - (var(--item-gap) * (var(--qty-in-row) - 1) / var(--qty-in-row)));
+      border-radius: 8px;
+      box-shadow: 0 10px 30px 0 rgba(8, 35, 54, 0.10);
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &__image {
+      display: inline-flex;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    &__title {
+      color: #0E0E0E;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 135%;
+      margin: 0;
+      padding: 18px 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, lg)-1}) {
+  .our-works__cards {
+    --qty-in-row: 2;
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, md)-1}) {
+  .our-works__cards {
+    --qty-in-row: 1;
+    max-width: 290px;
+    margin: 0 auto;
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+}

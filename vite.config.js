@@ -3,7 +3,7 @@ import vitePugPlugin from "vite-plugin-pug-transformer";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/dom-karnizov/',
+  // base: '/dom-karnizov/',
   appType: "mpa",
   plugins: [
     vitePugPlugin({}),
@@ -21,6 +21,8 @@ export default defineConfig({
         delivery: resolve(__dirname, "delivery.html"),
         payment: resolve(__dirname, "payment.html"),
         price: resolve(__dirname, "price.html"),
+        services: resolve(__dirname, "services.html"),
+        "our-works": resolve(__dirname, "our-works.html"),
       },
     },
   },

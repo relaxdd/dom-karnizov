@@ -65,3 +65,24 @@
     }
   }
 }
+
+@media (max-width: #{map-get($bp_sizes, lg)-1}) {
+  .info-cards__item {
+    padding: 32px 30px;
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, md)-1}) {
+  .info-cards {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 54px;
+      padding: 40px 28px 28px;
+    }
+
+    &__image {
+
+    }
+  }
+}
