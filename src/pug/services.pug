@@ -1,5 +1,5 @@
-extends layouts/_base_layout
-include ./mixins/utils/_image
+extends ./include/layouts/_base_layout
+include ./include/mixins/utils/_image
 
 block variables
   - var title = "Услуги"
@@ -17,14 +17,14 @@ block content
   .services__wrapper
     .services__item
       .services__image
-        +image("8ef5e2d85bd2e285003d86b96060265605dedec0.png", "./images/services/")
+        +image("8ef5e2d85bd2e285003d86b96060265605dedec0.png", "/images/services/")
       .services__content
         h2.services__title Выезд дизайнера с образцами
         .services__description
           p Дом Карнизов - интернет - магазин карнизов и комплектующих. Так же мы оказываем полный спектр услуг по декорированию помещений, который включает в себя:  выезд дизайнера с образцами на объект, выезд замерщика, индивидуальное изготовление карнизов, жалюзи, рулонных штор и штор плиссе, разработка дизайна и пошив штор, монтаж карнизов и солнцезащитных систем, навешивание штор.
     .services__item
       .services__image
-        +image("8fd15d482dce6df389c45341ee94ccf156b71876.png", "./images/services/")
+        +image("8fd15d482dce6df389c45341ee94ccf156b71876.png", "/images/services/")
       .services__content
         h2.services__title Выезд замерщика
         .services__description
@@ -32,14 +32,14 @@ block content
           p Все замеры в нашей компании "условно - платные". Плата взимается только в тех случаях, если клиент отказывается от заказа по независящим от нас обстоятельств. Замерщик поможет Вам избежать возможных ошибок при выборе карнизов и солнцезащитных систем.
     .services__item
       .services__image
-        +image("9b93e6bd790534cd554fe09facef12951d643a88.png", "./images/services/")
+        +image("9b93e6bd790534cd554fe09facef12951d643a88.png", "/images/services/")
       .services__content
         h2.services__title Индивидуальное изготовление карнизов / солнцезащиты
         .services__description
           p Правильный карниз - надежная и удобная архитектура Вашего окна. В нашем интернет- магазине Вы  можете купить готовый карниз определенного размера , а так же собрать карниз своей мечты . Мы выполним эркерное и арочное гнутие, загиб,  запил, удлинение, а так же соберем карниз по индивидуальным параметрам. Изготовление систем солнцезащиты выполняется строго по индивидуальным размерам. При заказе услуги Вызов замерщика или Вызов Дизайнера Вы получаете технически правильное и подходящее по размерам  изделие .
     .services__item
       .services__image
-        +image("afc3dbe4fb306c0c694f7dca83ae36bdd551eaf2.png", "./images/services/")
+        +image("afc3dbe4fb306c0c694f7dca83ae36bdd551eaf2.png", "/images/services/")
       .services__content
         h2.services__title Монтаж карнизов и солнцезащитных систем / Навешивание штор
         .services__description
@@ -47,7 +47,7 @@ block content
           p Специалисты нашей компании предлагают такую услугу, как профессиональное  навешивание штор. Выбранная вами модель удачно дополнит интерьер. Шторы и тюль отутюжат, уложат красиво, задрапируют. Навесив шторы, проинформируют Вас о правильном уходе за шторами,  дадут рекомендации . С нашей помощью изделия еще долго сохранят привлекательность.
     .services__item
       .services__image
-        +image("a3efde66a70dd5612b8b1c8a5944892e86b2617e.png", "./images/services/")
+        +image("a3efde66a70dd5612b8b1c8a5944892e86b2617e.png", "/images/services/")
       .services__content
         h2.services__title Отправка/ Доставка
         .services__description

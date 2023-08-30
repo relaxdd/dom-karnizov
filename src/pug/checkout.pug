@@ -1,5 +1,5 @@
-extends layouts/_base_layout
-include ./mixins/utils/_image
+extends ./include/layouts/_base_layout
+include ./include/mixins/utils/_image
 
 block variables
   - var title = "Оформление заказа"
@@ -48,7 +48,7 @@ block content
       each it, i in orders
         tr.order-table__row(data-item=i)
           td.order-table__image
-            +image(it.img, "./images/")
+            +image(it.img, "/images/")
           td.order-table__name #{it.name}
           td.order-table__stock
             .order-table__stock__shell

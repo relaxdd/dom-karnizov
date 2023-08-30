@@ -1,0 +1,31 @@
+extends ../include/layouts/_base_layout
+
+include ../include/mixins/utils/_image
+include ../include/mixins/_taxonomy_item
+
+block variables
+  - var title = "Карнизы"
+  - var description = "Страница таксономии / Карнизы"
+  - var canonical = "/category/cornices/"
+  - var breaditems = [{ text: title }]
+  -
+    var list = [
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 14.png", text: "Металлические карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 15.png", text: "Деревянные карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 16.png", text: "Эксклюзивные карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 17.png", text: "Багетные карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 18.png", text: "Эксклюзивные багетные карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 19.png", text: "Профильные карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 20.png", text: "Профильные карнизы с управлением", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 21.png", text: "Пластиковые карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 22.png", text: "Электро -управляемые карнизы", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 23.png", text: "Мини карнизы", link: "#" }
+    ]
+
+block head
+  link(href="/src/scss/taxonomy.page.scss" rel="stylesheet")
+
+block content
+  .category__wrapper
+    each it in list
+      +taxonomy_item(it)

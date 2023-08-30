@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 import * as glob from "glob";
 
 const indexDir = "/html/";
+const locals = { bundler: 'Vite' };
 
 const middleware = () => {
   return {
@@ -40,7 +41,12 @@ const middleware = () => {
 export default defineConfig({
   plugins: [
     middleware(),
-    vitePugPlugin({}),
+    vitePugPlugin({
+      pugLocals: locals,
+      pugOptions: {
+        basedir: "./src/pug/"
+      }
+    }),
   ],
   // base: '/dom-karnizov/',
   // appType: "mpa",

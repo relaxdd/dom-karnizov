@@ -1,5 +1,5 @@
-extends layouts/_base_layout
-include ./mixins/utils/_image
+extends ./include/layouts/_base_layout
+include ./include/mixins/utils/_image
 
 block variables
   - var title = "Оплата"
@@ -16,7 +16,7 @@ block content
   .info-cards__wrapper
     .info-cards__item
       .info-cards__image
-        +image("wallet-3260434-2725127 1.png", "./images/payment/")
+        +image("wallet-3260434-2725127 1.png", "/images/payment/")
       .info-cards__content
         h2.info-cards__title Оплата товара
         .info-cards__description
@@ -28,7 +28,7 @@ block content
             li Безналичным переводом ( для юридических лиц). Для оплаты , обратитесь к нашим менеджерам, для выставления счёта. Изготовление, отправка или доставка происходит после поступления денежных средств на счёт.
     .info-cards__item
       .info-cards__image
-        +image("refresh-5115228-4280976 1.png", "./images/payment/")
+        +image("refresh-5115228-4280976 1.png", "/images/payment/")
       .info-cards__content
         h2.info-cards__title Обмен
         .info-cards__description
@@ -43,7 +43,7 @@ block content
             p Внимание! Наш магазин не несет ответственности за срывание сроков доставки, за порчу упаковки и прочие возможные проблемы, которые произошли после сдачи товара в Транспортную Компанию.
     .info-cards__item
       .info-cards__image
-        +image("verified-return-5201137-4355736 1.png", "./images/payment/")
+        +image("verified-return-5201137-4355736 1.png", "/images/payment/")
       .info-cards__content
         h2.info-cards__title Возврат и обмен товара ненадлежащего качества
         .info-cards__description
@@ -57,7 +57,7 @@ block content
           p Обмен товара или возврат денежных средств Покупателю осуществляется после проведения экспертизы сервисного центра и наличие заключения о производственном браке. Выезд курьера для обмена или возврата товара покупатель оплачивает дополнительно.
     .info-cards__item
       .info-cards__image
-        +image("verified-return-5201137-4355736 1.png", "./images/payment/")
+        +image("verified-return-5201137-4355736 1.png", "/images/payment/")
       .info-cards__content
         h2.info-cards__title Отказ от покупки
         .info-cards__description

@@ -1,4 +1,4 @@
-extends layouts/_base_layout
+extends ./include/layouts/_base_layout
 
 block variables
   - var title = "Конструктор"
@@ -10,7 +10,7 @@ block head
   link(href="/src/scss/designer.page.scss" rel="stylesheet")
 
 block content
-  include ./parts/designer/_wrapper
+  include ./include/parts/designer/_wrapper
 
 block scripts
   script(src="/src/ts/designer.page.ts" type="module")

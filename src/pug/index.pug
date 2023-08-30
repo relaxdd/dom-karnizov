@@ -1,4 +1,4 @@
-extends layouts/_layout
+extends ./include/layouts/_layout
 
 block variables
   - var title = "Главная страница"
@@ -10,8 +10,8 @@ block head
   script(src="https://code.jquery.com/jquery-3.7.0.min.js")
 
 block main
-  include ./parts/home/_about_products
-  include ./parts/home/_viewed
+  include ./include/parts/home/_about_products
+  include ./include/parts/home/_viewed
 
 block scripts
   script(src="/src/ts/home.page.ts" type="module")

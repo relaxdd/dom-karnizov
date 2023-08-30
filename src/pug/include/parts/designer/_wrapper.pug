@@ -1,3 +1,5 @@
+include ../../mixins/utils/_image
+
 -
   var steps = [
     { text: "Форма карниза", isCompleted: true },
@@ -40,7 +42,7 @@
     each it, i in materials
       .design__materials__item(class=`${i === 0 ? "item-selected" : ""}`)
         .design__materials__image
-          img(src=`./images/materials/${it.src}`, alt=`${it.src.split('.')[0]}`)
+          +image(it.src, "/images/materials/")
         .design__materials__name
           span #{it.text}
   h2.design__title Выберите форму карниза
@@ -59,16 +61,16 @@
     .design__builder__center
       .design__builder__select
         button.design__builder__select__item.item-selected
-          img(src="./images/arrow-right-white.svg", alt="arrow-right-white")
+          +image("arrow-right-white.svg", "/images/")
           span Квадрат
         button.design__builder__select__item
-          img(src="./images/arrow-right-white.svg", alt="arrow-right-white")
+          +image("arrow-right-white.svg", "/images/")
           span Круг
         button.design__builder__select__item
-          img(src="./images/arrow-right-white.svg", alt="arrow-right-white")
+          +image("arrow-right-white.svg", "/images/")
           span Другое
       .design__builder__example
-        img(src="./images/3316_3318_1_3338_4363 1.png", alt="3316_3318_1_3338_4363 1")
+        +image("/images/3316_3318_1_3338_4363 1.png")
       .design__builder__move
         button.design__builder__move__btn
           svg(xmlns="http://www.w3.org/2000/svg", width="7", height="13", viewBox="0 0 7 13", fill="none")

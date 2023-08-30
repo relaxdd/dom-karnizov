@@ -1,5 +1,5 @@
-extends layouts/_base_layout
-include ./mixins/utils/_image
+extends ./include/layouts/_base_layout
+include ./include/mixins/utils/_image
 
 block variables
   - var title = "Галерея работ"
@@ -49,7 +49,7 @@ block content
           article.our-works__cards__item
             a.our-works__cards__link(href="#")
               div.our-works__cards__image
-                +image(it.img, "./images/gallery/")
+                +image(it.img, "/images/gallery/")
               h2.our-works__cards__title #{it.text}
 
 

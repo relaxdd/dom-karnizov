@@ -1,0 +1,25 @@
+extends ../include/layouts/_base_layout
+
+include ../include/mixins/utils/_image
+include ../include/mixins/_taxonomy_item
+
+block variables
+  - var title = "Солнцезащита"
+  - var description = "Страница таксономии / Солнцезащита"
+  - var canonical = "/category/sun-protection/"
+  - var breaditems = [{ text: title }]
+  -
+    var list = [
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 8.png", text: "Горизонтальные", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 9.png", text: "Вертикальные", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 10.png", text: "Рулонные", link: "#" },
+      { img: "1d36d23b156ead252433d4ce2c21c387_XL 11.png", text: "Плиссе", link: "#" },
+    ]
+
+block head
+  link(href="/src/scss/taxonomy.page.scss" rel="stylesheet")
+
+block content
+  .category__wrapper
+    each it in list
+      +taxonomy_item(it)

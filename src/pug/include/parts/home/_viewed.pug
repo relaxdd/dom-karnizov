@@ -12,11 +12,11 @@ section.viewed-products
   .container
     .viewed-products__header
       h2.viewed-products__title Вы уже смотрели
-      img.viewed-products__icon(src="./images/eye-icon.svg", alt="eye-icon")
+      img.viewed-products__icon(src="/images/eye-icon.svg", alt="eye-icon")
     .viewed-products__cards
       each it in list
         article.viewed-products__item
           .viewed-products__item__image
-            +image(it.src, "./images/")
+            +image(it.src, "/images/")
           .viewed-products__item__info
             p.viewed-products__item__title Штора на тесьме Leaves<br>(цвет: коричневый)

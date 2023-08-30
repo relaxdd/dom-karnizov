@@ -1,0 +1,11 @@
+mixin taxonomy_item(obj = {img: "", text: "Название таксономии", link: "#"}, base = undefined)
+  article.category__item
+    +image(obj.img, base || "/images/taxonomy/", { class: "category__image" })
+    .category__link
+      a(href=`${obj.link || "#"}`)
+        span.category__text #{obj.text}
+        span.category__icon
+          svg(xmlns="http://www.w3.org/2000/svg", width="32", height="32", viewBox="0 0 32 32", fill="none")
+            circle(cx="12", cy="12", r="12", transform="matrix(-1 0 0 1 28 4.01465)", fill="#1DA1E2")
+            circle(cx="15", cy="15", r="15.5", transform="matrix(-1 0 0 1 31 1)", stroke="#B9CBD3")
+            path(d="M15.1161 12.8357L18.3203 16.05L15.106 19.2643", stroke="white", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")

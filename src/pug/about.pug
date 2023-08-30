@@ -1,5 +1,5 @@
-extends layouts/_base_layout
-include ./mixins/utils/_image
+extends ./include/layouts/_base_layout
+include ./include/mixins/utils/_image
 
 block variables
   - var title = "О компании"
@@ -14,7 +14,7 @@ block content
   .about-company
     article.about-company__item
       .about-company__image
-        +image("image-asset 1.png", "./images/about/")
+        +image("image-asset 1.png", "/images/about/")
       .about-company__content
         h2.about-company__title О компании «Дом Карнизов»
         .about-company__description
@@ -28,7 +28,7 @@ block content
           p В дополнение к карнизам вы можете подобрать готовые комплекты штор для гостиной, спальни, кухни, детской и других комнат. Над созданием удачных комбинаций текстиля для вас работали лучшие дизайнеры известных брендов. Качественные фото в нашем каталоге помогут вам представить, насколько удачно та или иная модель впишется в интерьер. Для офисов и концептуальных современных интерьеров мы предлагаем практичные жалюзи и рулонные шторы.
     article.about-company__item
       .about-company__image
-        +image("image-asset 2.png", "./images/about/")
+        +image("image-asset 2.png", "/images/about/")
       .about-company__content
         h2.about-company__title События
         .about-company__description
@@ -40,7 +40,7 @@ block content
           p <strong>2019 г.</strong> Благодаря первому на текстильном рынке в России альянсу двух крупнейших игроков, компаний Daylight и Liontex, мы создаем уникальное предложение для клиентов по складской программе на базе трех взаимодополняющих брендов: Elegancia, NEVIO, Me Casa.
     article.about-company__item
       .about-company__image
-        +image("image-asset 3.png", "./images/about/")
+        +image("image-asset 3.png", "/images/about/")
       .about-company__content
         h2.about-company__title Цели и принципы
         .about-company__description

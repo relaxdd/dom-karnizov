@@ -1,13 +1,18 @@
-extends layouts/_base_layout
+extends ./include/layouts/_base_layout
 
 block variables
-  - var title = "Аксессуары"
-  - var description = "Страница таксономии / Аксессуары"
-  - var canonical = "/taxonomy"
+  - var title = "Категории"
+  - var description = "Страница категорий для товаров"
+  - var canonical = "/category/"
   - var breaditems = [{ text: title }]
 
 block head
   link(href="/src/scss/taxonomy.page.scss" rel="stylesheet")
 
 block content
-
+  h2 Страница категорий для товаров
+  ul
+    li: a(href="/category/cornices/index.html") Карнизы
+    li: a(href="/category/fabrics/index.html") Ткани
+    li: a(href="/category/sun-protection/index.html") Солнцезащита
+    li: a(href="/category/accessories/index.html") Аксессуары

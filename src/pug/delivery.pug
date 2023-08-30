@@ -1,5 +1,5 @@
-extends layouts/_base_layout
-include ./mixins/utils/_image
+extends ./include/layouts/_base_layout
+include ./include/mixins/utils/_image
 
 block variables
   - var title = "Доставка"
@@ -14,7 +14,7 @@ block content
   .info-cards__wrapper
     .info-cards__item
       .info-cards__image
-        +image("delivery-location 2.png", "./images/delivery/")
+        +image("delivery-location 2.png", "/images/delivery/")
       .info-cards__content
         h2.info-cards__title Доставка
         .info-cards__description
@@ -23,7 +23,7 @@ block content
           p Так же есть категория товаров, которые являются заказными позициями. Что это значит? Эксклюзивный товар, который находится в зарубежных странах. И сроки заказов таких товаров увеличены, что связано непосредственно с логистикой. О данной информации Вас проинформирует наш менеджер перед оформлением заказа.
     .info-cards__item
       .info-cards__image
-        +image("timer-4544083-3773191 1.png", "./images/delivery/")
+        +image("timer-4544083-3773191 1.png", "/images/delivery/")
       .info-cards__content
         h2.info-cards__title Сроки доставки
         .info-cards__description
@@ -33,7 +33,7 @@ block content
             li Срока доставки до Вас (курьерской службой по г.Анапе  или транспортной компанией по России)
     .info-cards__item
       .info-cards__image
-        +image("coins-5204461-4340785 1.png", "./images/delivery/")
+        +image("coins-5204461-4340785 1.png", "/images/delivery/")
       .info-cards__content
         h2.info-cards__title Стоимость Доставки
         .info-cards__description
