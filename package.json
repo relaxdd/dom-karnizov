@@ -23,11 +23,11 @@
     "autoprefixer": "^10.4.15",
     "fs-extra": "^11.1.1",
     "glob": "^10.3.3",
+    "picocolors": "^1.0.0",
     "pug": "^3.0.2",
     "sass": "^1.66.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.5",
-    "vite-plugin-pug-transformer": "^1.0.3"
+    "vite": "^4.4.5"
   },
   "browserslist": {
     "production": [
