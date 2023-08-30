@@ -1,0 +1,54 @@
+@import "./modules/vars";
+
+.brands {
+  &__wrapper {
+    --qty-items: 4;
+    --item-gap: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--item-gap);
+    margin-bottom: 74px;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: calc(100% / var(--qty-items) - var(--item-gap) * (var(--qty-items) - 1) / var(--qty-items));
+    max-height: 260px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px 0 rgba(8, 35, 54, 0.10);
+    transition: scale .15s ease-out;
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      scale: 1.05
+    }
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, lg)-1}) {
+  .brands__wrapper {
+    --qty-items: 3;
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, md)-1}) {
+  .brands__wrapper {
+    --qty-items: 2;
+  }
+}
+
+

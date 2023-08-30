@@ -12,7 +12,7 @@ h1.page-title {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: var(--item-gap);
     margin-bottom: 98px;
   }
 

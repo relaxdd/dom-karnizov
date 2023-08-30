@@ -17,7 +17,7 @@ h1.page-title {
     --item-gap: 40px;
 
     display: flex;
-    column-gap: 40px;
+    column-gap: var(--item-gap);
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0 10px 50px 0 rgba(26, 77, 102, 0.10);
