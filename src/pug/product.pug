@@ -1,0 +1,63 @@
+extends ./include/layouts/_layout
+
+include ./include/mixins/utils/_image
+include ./include/mixins/_breadcrumbs
+
+block variables
+  - var title = "Бахрома для штор золотистого цвета со стеклярусом"
+  - var description = "Страница товара в категории \"Ткани > Бахрома\""
+  - var canonical = "/category/accessories/bahroma/bahroma-dlya-shtor-zolotistogo-cveta-so-steklyarusom.html"
+  - var breaditems = [{text: "Аксессуары", link: "/category/accessories/"}, {text: "Бахрома", link: "/category/accessories/bahroma/"}, { text: title }]
+  - var baseImgPath = "/images/product/"
+  -
+    var spec = [
+      { name: "Бренд", value: "Elegancia" },
+      { name: "Коллекция", value: "Indigo" },
+      { name: "Состав", value: "INDIGO" },
+      { name: "Цвет", value: "Красный" },
+      { name: "Размер", value: "120" },
+      { name: "Единица измерения", value: "см" },
+      { name: "Страна", value: "Россия" },
+    ]
+
+block head
+  link(href="/src/scss/product.page.scss" rel="stylesheet")
+
+block main
+  .container
+    +breadcrumbs(breaditems)
+
+    #product-111.product
+      .product__image
+        .product__current
+          +image("product-bahroma-main.png", baseImgPath)
+        .product__gallery
+          .product__gallery__item
+            +image("1d36d23b156ead252433d4ce2c21c387_XL 2.png", baseImgPath)
+          .product__gallery__item
+            +image("1d36d23b156ead252433d4ce2c21c387_XL 3.png", baseImgPath)
+          .product__gallery__item
+            +image("1d36d23b156ead252433d4ce2c21c387_XL 4.png", baseImgPath)
+          .product__gallery__item
+            +image("1d36d23b156ead252433d4ce2c21c387_XL 5.png", baseImgPath)
+      .product__content
+        h1.product__title Бахрома для штор золотистого цвета со стеклярусом
+        .product__info
+          span.product__price 5600 ₽
+          form.product__form
+            div.product__qty
+              button.product__qty__action(type="button")
+                svg(xmlns="http://www.w3.org/2000/svg", width="13", height="12", viewBox="0 0 13 12", fill="none")
+                  path(fill-rule="evenodd", clip-rule="evenodd", d="M5.00814 7.00058V12.0002H7.00814V7.00058L12.0137 7.00058V5.00058L7.00815 5.00058V0.000244141H5.00815V5.00058L0.0136719 5.00058V7.00058L5.00814 7.00058Z", fill="#757575")
+              input.product__qty__field(type="text" name="quantity" value="1")
+              button.product__qty__action(type="button")
+                svg(xmlns="http://www.w3.org/2000/svg", width="13", height="2", viewBox="0 0 13 2", fill="none")
+                  path(fill-rule="evenodd", clip-rule="evenodd", d="M0.992188 0L12.9922 1.04907e-06V2L0.992188 2L0.992188 0Z", fill="#757575")
+            button.product__add_in_cart(type="submit") В корзину
+        .product__spec
+          h2.product__spec__title Технические характеристики
+          .product__spec__shell
+            each it in spec
+              .product__spec__item
+                div: span #{it.name}:
+                div: span #{it.value}

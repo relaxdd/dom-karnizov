@@ -16,8 +16,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/dom-karnizov/",
-  // appType: "mpa",
+  // base: "/dom-karnizov/",
   root: join(__dirname, "src"),
   publicDir: join(__dirname, "public"),
   resolve: {

@@ -4,8 +4,9 @@ include ../include/mixins/utils/_image
 block variables
   - var title = "Бахрома"
   - var description = "Страница товаров с категорией \"Бахрома\""
-  - var canonical = "/brands.html"
+  - var canonical = "/category/accessories/bahroma.html"
   - var breaditems = [{ text: "Аксессуары", link: "/category/accessories/" }, { text: title }]
+  - var productLink = '/category/accessories/bahroma/bahroma-dlya-shtor-zolotistogo-cveta-so-steklyarusom.html'
   -
     var products = [
       {
@@ -42,10 +43,10 @@ block content
     each i in [0, 1, 2, 3]
       each it in i % 2 === 0 ? products : [...products].reverse()
         .products__item
-          a.products__image(href="#")
+          a.products__image(href=productLink)
             +image(it.img, "/images/products/")
           .products__content
-            h2.products__name: a(href="#") #{it.name}
+            h2.products__name: a(href=productLink) #{it.name}
             .products__bottom
               span.products__price от #{it.price} ₽
               span.products__meta #{it.meta}
