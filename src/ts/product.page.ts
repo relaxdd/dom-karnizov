@@ -47,9 +47,17 @@ function useProductGallery() {
   })
 
   $gallery.owlCarousel({
-    items: $gallery.data('qty-items') ?? 4,
+    items: 3,
     nav: true,
     dots: false,
+    responsive: {
+      560: {
+        items: 4
+      },
+      700: {
+        items: $gallery.data('qty-items') ?? 4
+      }
+    },
     margin: 18,
     navClass: ['owl-prev product__gallery__nav', 'owl-next product__gallery__nav'],
     navText: [

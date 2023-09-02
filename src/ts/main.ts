@@ -1,17 +1,11 @@
-import header from './includes/header'
+import header from './includes/header.ts'
+import modal from './includes/modal.ts'
+import { prependBase } from './includes/utils.ts'
 
 function main() {
-  header();
-
-  (function prependBase() {
-    document.querySelectorAll('a').forEach((link) => {
-      let url = link.getAttribute('href')
-      if (url?.startsWith('/')) {
-        url = (import.meta.env?.BASE_URL || '/') + url.slice(1)
-        link.setAttribute('href', url)
-      }
-    })
-  })()
+  header()
+  modal()
+  prependBase()
 }
 
 main()

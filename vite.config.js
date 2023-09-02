@@ -16,7 +16,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/dom-karnizov/",
+  // base: "/dom-karnizov/",
   root: join(__dirname, "src"),
   publicDir: join(__dirname, "public"),
   resolve: {

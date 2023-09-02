@@ -12,11 +12,11 @@ block variables
   - var product = { id: 2, name: title, galleryItems: 5 }
   -
     var spec = [
-      { name: "Диаметр трубы", values: ["Ø 16", "Ø 20", ""] },
+      { name: "Диаметр трубы", values: ["Ø 16", "Ø 20", "-"] },
       { name: "Форма трубы:", values: ["Гладкая", "Витая", "Рифленная"] },
       { name: "Количество рядов:", values: ["1", "2", "3"] },
-      { name: "Материал:", values: ["Металл", "", ""] },
-      { name: "Крепление:", values: ["Стена", "Потолок", ""] },
+      { name: "Материал:", values: ["Металл", "-", "-"] },
+      { name: "Крепление:", values: ["Стена", "Потолок", "-"] },
     ]
   -
     var current = [
@@ -40,7 +40,7 @@ block variables
 
   -
     var table = [
-      ["Ø 16", "", "Ø 16 / Ø 16"],
+      ["Ø 16", "-", "Ø 16 / Ø 16"],
       ["2520 ₽", "160 см", "2520 ₽"],
       ["2628 ₽", "200 см", "2628 ₽"],
       ["3614 ₽", "300 см", "3614 ₽"],
@@ -71,10 +71,10 @@ block product-content
           div#productSpecCustom
             .spec_custom__type
               .spec_custom__type__item
-                span Одинарный
+                div: span Одинарный
                 +image("shema-sborki-kruglyh-karnizov 1.png", "/images/product/karniz/")
               .spec_custom__type__item
-                span Двойной
+                div: span Двойной
                 +image("shema-sborki-kruglyh-karnizov 2.png", "/images/product/karniz/")
             .spec_custom__blocks
               each i in [0, 1]
