@@ -20,8 +20,8 @@
   }
 }
 
-@media (max-width: #{map-get($bp_sizes, lg)-1}) {
-  .breadcrumbs {
-    display: none;
-  }
-}
+// @media (max-width: #{map-get($bp_sizes, lg)-1}) {
+//   .breadcrumbs {
+//     display: none;
+//   }
+// }

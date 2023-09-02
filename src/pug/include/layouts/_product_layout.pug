@@ -1,0 +1,43 @@
+extends ./_layout
+
+include ../mixins/utils/_image
+include ../mixins/_breadcrumbs
+
+block variables
+  - var current = []
+  - var gallery = []
+  -
+    var product = {
+      id: 0,
+      name: "Название товара",
+      galleryItems: 4
+    }
+
+block head
+  link(href="/src/scss/product.page.scss" rel="stylesheet")
+  script(src="https://code.jquery.com/jquery-3.7.0.min.js")
+
+block main
+  .container
+    +breadcrumbs(breaditems, false)
+
+    .page-content
+      .product(id=`product-${product.id}`)
+        h1.product__title.product__title__md #{product.name}
+        .product__shell
+          .product__image
+            #productCurrent.product__current.owl-carousel
+              each img, i in current
+                .product__current__item(data-index=i)
+                  +image(img, baseImgPath)
+            #productGallery.product__gallery.owl-carousel(data-qty-items=product.galleryItems)
+              each img, i in gallery
+                .product__gallery__item(data-index=i)
+                  +image(img, baseImgPath)
+          .product__content
+            h1.product__title.product__title__lg #{product.name}
+
+            block product-content
+
+block scripts
+  script(src='/src/ts/product.page.ts' type="module")

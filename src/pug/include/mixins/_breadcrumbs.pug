@@ -1,5 +1,5 @@
-mixin breadcrumbs(items)
-  div(class="breadcrumbs")
+mixin breadcrumbs(items = [], hideOnMobile = true)
+  div(class=`breadcrumbs ${hideOnMobile ? 'd-none d-lg-block' : ''}`.trim())
     a(href="/" class="breadcrumbs__link") Главная
     each it, i in items
       if (i !== items.length - 1)

@@ -16,6 +16,8 @@ $max_widths: (
   lg: 1280px
 ) !default;
 
+$fixed_sm_width: 340px;
+
 %fill_image {
   position: absolute;
   top: 0;

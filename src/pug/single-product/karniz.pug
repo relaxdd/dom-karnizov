@@ -1,0 +1,88 @@
+extends ../include/layouts/_product_layout
+
+include ../include/mixins/utils/_image
+include ../include/mixins/_breadcrumbs
+
+block variables
+  - var title = "Металлический карниз для штор «Адель»"
+  - var description = "Страница товара в категории \"Карниз > Металлический\""
+  - var canonical = "/category/cornices/metallicheskij-karniz-dlya-shtor-adel.html"
+  - var breaditems = [{text: "Карнизы", link: "/category/cornices/"}, { text: title }]
+  - var baseImgPath = "/images/product/karniz/"
+  - var product = { id: 2, name: title, galleryItems: 5 }
+  -
+    var spec = [
+      { name: "Диаметр трубы", values: ["Ø 16", "Ø 20", ""] },
+      { name: "Форма трубы:", values: ["Гладкая", "Витая", "Рифленная"] },
+      { name: "Количество рядов:", values: ["1", "2", "3"] },
+      { name: "Материал:", values: ["Металл", "", ""] },
+      { name: "Крепление:", values: ["Стена", "Потолок", ""] },
+    ]
+  -
+    var current = [
+      "1d36d23b156ead252433d4ce2c21c387_XL 7.png",
+      "ae84c06d33b20324085689adf2706992.jpg",
+      "16fb085daad2ca3fb25575c5f0920980.jpg",
+      "11d50b26ea21ea5de4662aaac965f585.jpg",
+      "1d36d23b156ead252433d4ce2c21c387_XL 7.png",
+      "11d50b26ea21ea5de4662aaac965f585.jpg",
+    ]
+
+  -
+    var gallery = [
+      "1d36d23b156ead252433d4ce2c21c387_XL 7.png",
+      "1d36d23b156ead252433d4ce2c21c387_XL 3.png",
+      "1d36d23b156ead252433d4ce2c21c387_XL 4.png",
+      "1d36d23b156ead252433d4ce2c21c387_XL 5.png",
+      "1d36d23b156ead252433d4ce2c21c387_XL 7.png",
+      "1d36d23b156ead252433d4ce2c21c387_XL 3.png",
+    ]
+
+  -
+    var table = [
+      ["Ø 16", "", "Ø 16 / Ø 16"],
+      ["2520 ₽", "160 см", "2520 ₽"],
+      ["2628 ₽", "200 см", "2628 ₽"],
+      ["3614 ₽", "300 см", "3614 ₽"],
+    ]
+
+block product-content
+  .product__content__shell
+    .product__spec.product__spec__blue
+      .product__spec__blocks
+        .product__spec__block
+          h2.product__spec__title Технические характеристики
+          .product__spec__list
+            .product__spec__item
+              div: span Цвет:
+              div: .product__spec__variants#variantColors
+                .product__spec__variants__ceil: span(style="background-color: #B85353;")
+                .product__spec__variants__ceil: span(style="background-color: #55B853;")
+                .product__spec__variants__ceil: span(style="background-color: #5388B8;")
+            each it in spec
+              .product__spec__item
+                div: span #{it.name}
+                div: .product__spec__variants
+                  .product__spec__variants__ceil: span #{it.values[0]}
+                  .product__spec__variants__ceil: span #{it.values[1]}
+                  .product__spec__variants__ceil: span #{it.values[2]}
+        .product__spec__block
+          h2.product__spec__title Цены
+          div#productSpecCustom
+            .spec_custom__type
+              .spec_custom__type__item
+                span Одинарный
+                +image("shema-sborki-kruglyh-karnizov 1.png", "/images/product/karniz/")
+              .spec_custom__type__item
+                span Двойной
+                +image("shema-sborki-kruglyh-karnizov 2.png", "/images/product/karniz/")
+            .spec_custom__blocks
+              each i in [0, 1]
+                .spec_custom__block
+                  .spec_custom__list
+                    each it in table
+                      .spec_custom__list__row
+                        .spec_custom__list__ceil: span #{it[0]}
+                        .spec_custom__list__ceil: span #{it[1]}
+                        .spec_custom__list__ceil: span #{it[2]}
+                  p.spec_custom__note Карниз может быть изготовлен под любой размер!

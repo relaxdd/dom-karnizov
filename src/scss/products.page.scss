@@ -1,5 +1,14 @@
 @import "./modules/vars";
 
+h1.page-title {
+  margin-top: 24px;
+  margin-bottom: 42px;
+
+  @media (max-width: #{map-get($bp_sizes, lg)-1}) {
+    margin-bottom: 46px;
+  }
+}
+
 .products {
   &__wrapper {
     --qty-items: 4;
@@ -21,10 +30,10 @@
   &__item {
     flex: 0 0 auto;
     width: calc(100% / var(--qty-items) - var(--item-gap) * (var(--qty-items) - 1) / var(--qty-items));
+    display: flex;
+    flex-direction: column;
     border-radius: 4px;
     box-shadow: 0 10px 30px 0 rgba(8, 35, 54, 0.10);
-
-
   }
 
   &__item:hover &__image img {
@@ -34,9 +43,10 @@
   &__image {
     display: inline-flex;
     overflow: hidden;
+    width: 100%;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       object-fit: cover;
       transition: scale .15s ease-out;
@@ -44,6 +54,10 @@
   }
 
   &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 14px 16px 16px;
   }
 
@@ -82,5 +96,27 @@
     font-weight: 400;
     line-height: 125%;
     padding: 4px 10px;
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, lg)-1}) {
+  .products {
+    &__wrapper {
+      --qty-items: 2;
+    }
+  }
+}
+
+@media (max-width: #{map-get($bp_sizes, md)-1}) {
+  .products {
+    &__wrapper {
+      --qty-in-row: 1;
+      max-width: $fixed_sm_width;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 100%;
+    }
   }
 }

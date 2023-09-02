@@ -1,3 +1,5 @@
+// ********** Bootstrap **********
+
 .container, .container-lg, .container-md {
   --bs-gutter-x: 1.875rem;
   --bs-gutter-y: 0;
@@ -8,9 +10,25 @@
   width: 100%;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
 @media (min-width: #{map-get($bp_sizes, md)}) {
   .container, .container-md {
     max-width: #{map-get($max_widths, md)};
+  }
+
+  .d-md-none {
+    display: none;
+  }
+
+  .d-md-block {
+    display: block;
   }
 }
 
@@ -18,7 +36,17 @@
   .container, .container-lg, .container-md {
     max-width: #{map-get($max_widths, lg)};
   }
+
+  .d-lg-none {
+    display: none;
+  }
+
+  .d-lg-block {
+    display: block;
+  }
 }
+
+// ********** Common **********
 
 .page-title {
   color: #0E0E0E;

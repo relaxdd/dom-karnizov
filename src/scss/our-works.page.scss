@@ -106,7 +106,7 @@ h1.page-title {
 @media (max-width: #{map-get($bp_sizes, md)-1}) {
   .our-works__cards {
     --qty-in-row: 1;
-    max-width: 290px;
+    max-width: $fixed_sm_width;
     margin: 0 auto;
 
     &__item {

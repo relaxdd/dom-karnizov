@@ -1,5 +1,7 @@
-extends ../include/layouts/_base_layout
+extends ../include/layouts/_layout
+
 include ../include/mixins/utils/_image
+include ../include/mixins/_breadcrumbs
 
 block variables
   - var title = "Бахрома"
@@ -38,15 +40,21 @@ block variables
 block head
   link(href="/src/scss/products.page.scss" rel="stylesheet")
 
-block content
-  .products__wrapper
-    each i in [0, 1, 2, 3]
-      each it in i % 2 === 0 ? products : [...products].reverse()
-        .products__item
-          a.products__image(href=productLink)
-            +image(it.img, "/images/products/")
-          .products__content
-            h2.products__name: a(href=productLink) #{it.name}
-            .products__bottom
-              span.products__price от #{it.price} ₽
-              span.products__meta #{it.meta}
+block main
+  .container
+    +breadcrumbs(breaditems, false)
+
+    h1.page-title #{title}
+
+    .page-content
+      .products__wrapper
+        each i in [0, 1, 2, 3]
+          each it in i % 2 === 0 ? products : [...products].reverse()
+            .products__item
+              a.products__image(href=productLink)
+                +image(it.img, "/images/products/")
+              .products__content
+                h2.products__name: a(href=productLink) #{it.name}
+                .products__bottom
+                  span.products__price от #{it.price} ₽
+                  span.products__meta #{it.meta}
