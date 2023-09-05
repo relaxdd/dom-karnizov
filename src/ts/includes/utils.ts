@@ -10,9 +10,18 @@ export function prependBase() {
     }
   })
 
+
+}
+
+export function replaceBase() {
+  const base = import.meta.env?.BASE_URL || '/'
+  if (base === '/') return
+
   document.querySelectorAll('img').forEach((img) => {
     const src = img.getAttribute('src')
     if (!src || src?.startsWith(base)) return
     img.setAttribute('src', base + src.slice(1))
   })
 }
+
+
